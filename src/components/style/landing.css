@@ -1,0 +1,98 @@
+.title{
+    font-size: 3.5em;
+    font-weight: 700;
+    color: rgb(124, 121, 121);
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+.landing-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 50vh;
+    width: 98vw;
+    background-color: rgb(255, 255, 255);
+}
+.userinfo-container{
+    height: 150px;
+    width: 30%;
+    margin-left: 100px;
+    background-color: rgb(255, 255, 255);
+}
+.sites-container{
+    height: 50vh;
+    width: 30%;
+    background-color: rgb(255, 255, 255);
+}
+.card{
+    width: 20vw;
+    height: 20vh;
+    margin: 1em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card:hover{
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card-title{
+    font-size: 1.5em;
+    font-weight: 700;
+    color: rgb(124, 121, 121);
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+.sites-title{
+    font-size: 1.5em;
+    font-weight: 700;
+    color: rgb(124, 121, 121);
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+.site-link{
+    text-decoration: none;
+}
+.userinfo-title{
+    font-size: 1.5em;
+    font-weight: 700;
+    color: rgb(124, 121, 121);
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+@media (max-width: 778px) {
+    .landing-container{
+        flex-direction: row;
+        height: 20px;
+    }
+    .userinfo-container{
+        width: 70%;
+        margin-left: 20px;
+        display: inline-table;
+    }
+    .sites-container{
+        width: 80%;
+        display: flex;
+        margin-left: 50px;
+        flex-wrap: wrap;
+    }
+    .site-link-card{
+        margin: 10px;
+    }
+    .title{
+        margin-left: 20px;
+    }
+}
+    

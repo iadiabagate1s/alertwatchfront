@@ -1,23 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from "react-router-dom";
+import Login from './components/login';
+import Landing from './components/landing';
+import ForgotPassword from './components/forgotpassword';
+import UserAdmin from './components/useradmin/useradmin';
+import SiteAdmin from './components/siteadmin/siteadmin';
+import Sidebar from './components/sidebar';
+import PasswordReset from './components/passwordreset';
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <Router>
+      <Sidebar />
+        <Routes>
+          <Route exact path="/" element={<Login/>}/>
+          <Route path="/passwordreset" element={<PasswordReset/>}/>
+          <Route exact path="/login" element={<Login/>}/>
+          <Route exact path="/landing" element={<Landing/>}/>
+          <Route exact path="/useradmin" element={<UserAdmin/>}/>
+          <Route exact path="/siteadmin" element={<SiteAdmin/>}/>
+          <Route path="*" element={<h1>404</h1>}/>
+          <Route exact path="/forgotpassword" element={<ForgotPassword/>}/>
+          {/* <Route path="*" element={<NotFound/>}/> */}
+        </Routes>
+    </Router>
+
     </div>
   );
 }
